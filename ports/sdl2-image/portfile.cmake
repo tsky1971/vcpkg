@@ -1,11 +1,3 @@
-# Common Ambient Variables:
-#   VCPKG_ROOT_DIR = <C:\path\to\current\vcpkg>
-#   TARGET_TRIPLET is the current triplet (x86-windows, etc)
-#   PORT is the current port name (zlib, etc)
-#   CURRENT_BUILDTREES_DIR = ${VCPKG_ROOT_DIR}\buildtrees\${PORT}
-#   CURRENT_PACKAGES_DIR  = ${VCPKG_ROOT_DIR}\packages\${PORT}_${TARGET_TRIPLET}
-#
-
 include(vcpkg_common_functions)
 set(SDL2_IMAGE_VERSION "2.0.2")
 set(SOURCE_PATH ${CURRENT_BUILDTREES_DIR}/src/SDL2_image-${SDL2_IMAGE_VERSION})
@@ -22,12 +14,19 @@ file(COPY ${CMAKE_CURRENT_LIST_DIR}/FindWEBP.cmake DESTINATION ${SOURCE_PATH}/cm
 vcpkg_configure_cmake(
     SOURCE_PATH ${SOURCE_PATH}
     PREFER_NINJA
-    # OPTIONS
-    # OPTIONS_RELEASE -DOPTIMIZE=1
-    # OPTIONS_DEBUG -DDEBUGGABLE=1
+    OPTIONS
+        -DCMAKE_MODULE_PATH=${CURRENT_INSTALLED_DIR}/share/libwebp
 )
 
 vcpkg_install_cmake()
+
+vcpkg_fixup_cmake_targets(CONFIG_PATH share/unofficial-sdl2-image TARGET_PATH share/unofficial-sdl2-image)
+
+configure_file(
+    ${CMAKE_CURRENT_LIST_DIR}/unofficial-sdl2-image-config.in.cmake
+    ${CURRENT_PACKAGES_DIR}/share/unofficial-sdl2-image/unofficial-sdl2-image-config.cmake
+    @ONLY
+)
 
 # Handle copyright
 file(COPY ${SOURCE_PATH}/COPYING.txt DESTINATION ${CURRENT_PACKAGES_DIR}/share/sdl2-image)
