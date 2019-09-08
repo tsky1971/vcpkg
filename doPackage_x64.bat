@@ -7,6 +7,7 @@ brotli ^
 bzip2 ^
 bullet3 ^
 cgal ^
+czmq ^
 cppzmq ^
 curl ^
 fastlz ^
