@@ -34,11 +34,18 @@ ode ^
 opencv ^
 protobuf ^
 rpclib ^
+sdl2 ^
+sdl2-gfx ^
+sdl2-image ^
+sdl2-mixer ^
+sdl2-net ^
+sdl2-ttf ^
+sdl2pp ^
 zeromq ^
 zlib ^
 zstd ^
 zziplib
 
 %EXE_VCPKG% --triplet %TRIPLET% install %PAKETS% 
-%EXE_VCPKG% --triplet %TRIPLET% export %PAKETS% --zip 
+rem %EXE_VCPKG% --triplet %TRIPLET% export %PAKETS% --zip 
 
