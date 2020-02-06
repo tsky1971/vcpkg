@@ -10,6 +10,7 @@ cgal ^
 czmq ^
 cppzmq ^
 curl ^
+enet ^
 fastlz ^
 flatbuffers ^
 gdal ^
@@ -31,7 +32,7 @@ mongo-cxx-driver ^
 msgpack ^
 nanomsg ^
 ode ^
-opencv ^
+opencv4 ^
 protobuf ^
 rpclib ^
 sdl2 ^
