@@ -15,6 +15,7 @@ fastlz ^
 flatbuffers ^
 gdal ^
 freeglut ^
+ftgl ^
 glm ^
 glew ^
 glfw3 ^
@@ -42,11 +43,13 @@ sdl2-mixer ^
 sdl2-net ^
 sdl2-ttf ^
 sdl2pp ^
+soil2 ^
 zeromq ^
 zlib ^
 zstd ^
 zziplib
 
 %EXE_VCPKG% --triplet %TRIPLET% install %PAKETS% 
-rem %EXE_VCPKG% --triplet %TRIPLET% export %PAKETS% --zip 
+%EXE_VCPKG% --triplet %TRIPLET% export %PAKETS% --zip 
 
+pause
