@@ -1,4 +1,4 @@
-SET EXE_VCPKG="D:/GitHub/tsky1971/vcpkg/vcpkg.exe"
+SET EXE_VCPKG="D:/GitHub/vcpkg/vcpkg.exe"
 SET TRIPLET=x64-windows
 
 SET PAKETS=alembic ^
@@ -15,12 +15,13 @@ fastlz ^
 flatbuffers ^
 gdal ^
 freeglut ^
-ftgl ^
 glm ^
 glew ^
 glfw3 ^
 kinectsdk1 ^
 kinectsdk2 ^
+libusb ^
+libusb-win32 ^
 liblo ^
 liblzma ^
 libsodium ^
@@ -28,12 +29,12 @@ libssh ^
 libssh2 ^
 libzip ^
 lz4 ^
-mongo-c-driver ^
-mongo-cxx-driver ^
+libdshowcapture ^
 msgpack ^
+libmodbus ^
 nanomsg ^
-ode ^
-opencv4 ^
+opencv ^
+openimageio ^
 protobuf ^
 rpclib ^
 sdl2 ^
@@ -43,7 +44,6 @@ sdl2-mixer ^
 sdl2-net ^
 sdl2-ttf ^
 sdl2pp ^
-soil2 ^
 zeromq ^
 zlib ^
 zstd ^
@@ -53,3 +53,8 @@ zziplib
 %EXE_VCPKG% --triplet %TRIPLET% export %PAKETS% --zip 
 
 pause
+
+rem ode ^
+rem mongo-c-driver ^
+rem mongo-cxx-driver ^
+rem ffmpeg ^
