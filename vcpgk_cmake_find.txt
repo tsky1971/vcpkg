@@ -1,0 +1,390 @@
+Your feedback is important to improve Vcpkg! Please take 3 minutes to complete our survey by running: vcpkg contact --survey
+Computing installation plan...
+The following packages are already installed:
+    alembic[core]:x64-windows
+    assimp[core]:x64-windows
+    brotli[core]:x64-windows
+    bullet3[core]:x64-windows
+    bzip2[core]:x64-windows
+    cgal[core]:x64-windows
+    cppzmq[core]:x64-windows
+    curl[core,non-http,schannel,ssl,sspi,winssl]:x64-windows
+    czmq[core]:x64-windows
+    enet[core]:x64-windows
+    evpp[core]:x64-windows
+    fastlz[core]:x64-windows
+    ffmpeg[avcodec,avdevice,avfilter,avformat,avresample,core,gpl,postproc,swresample,swscale]:x64-windows
+    flatbuffers[core]:x64-windows
+    freeglut[core]:x64-windows
+    gdal[core]:x64-windows
+    geographiclib[core]:x64-windows
+    geotrans[core]:x64-windows
+    glad[core]:x64-windows
+    glew[core]:x64-windows
+    glfw3[core]:x64-windows
+    glm[core]:x64-windows
+    kinectsdk1[core]:x64-windows
+    kinectsdk2[core]:x64-windows
+    libdshowcapture[core]:x64-windows
+    liblo[core]:x64-windows
+    liblzma[core]:x64-windows
+    libmodbus[core]:x64-windows
+    libnoise[core]:x64-windows
+    libsodium[core]:x64-windows
+    libssh[core,crypto,mbedtls]:x64-windows
+    libssh2[core]:x64-windows
+    libusb[core]:x64-windows
+    libusb-win32[core]:x64-windows
+    libusbmuxd[core]:x64-windows
+    libzip[bzip2,core,default-aes,openssl,wincrypto]:x64-windows
+    llvm[clang,core,default-targets,disable-abi-breaking-checks,disable-assertions,disable-clang-static-analyzer,enable-rtti,lld,target-x86,tools]:x64-windows
+    lz4[core]:x64-windows
+    mongo-c-driver[core]:x64-windows
+    mongo-cxx-driver[core]:x64-windows
+    msgpack[core]:x64-windows
+    nanomsg[core]:x64-windows
+    nng[core]:x64-windows
+    opencv[core,dnn,jpeg,opengl,png,tiff,webp]:x64-windows
+    openimageio[core]:x64-windows
+    paho-mqtt[core]:x64-windows
+    paho-mqttpp3[core,ssl]:x64-windows
+    proj[core]:x64-windows
+    protobuf[core]:x64-windows
+    quaternions[core]:x64-windows
+    rpclib[core]:x64-windows
+    sdl2[core]:x64-windows
+    sdl2-gfx[core]:x64-windows
+    sdl2-image[core]:x64-windows
+    sdl2-mixer[core,nativemidi]:x64-windows
+    sdl2-net[core]:x64-windows
+    sdl2-ttf[core]:x64-windows
+    sdl2pp[core]:x64-windows
+    slikenet[core]:x64-windows
+    speex[core]:x64-windows
+    speexdsp[core]:x64-windows
+    zeromq[core]:x64-windows
+    zlib[core]:x64-windows
+    zstd[core]:x64-windows
+    zziplib[core]:x64-windows
+Package alembic:x64-windows is already installed
+Package assimp:x64-windows is already installed
+Package brotli:x64-windows is already installed
+Package bullet3:x64-windows is already installed
+Package bzip2:x64-windows is already installed
+Package cgal:x64-windows is already installed
+Package cppzmq:x64-windows is already installed
+Package curl:x64-windows is already installed
+Package czmq:x64-windows is already installed
+Package enet:x64-windows is already installed
+Package evpp:x64-windows is already installed
+Package fastlz:x64-windows is already installed
+Package ffmpeg:x64-windows is already installed
+Package flatbuffers:x64-windows is already installed
+Package freeglut:x64-windows is already installed
+Package gdal:x64-windows is already installed
+Package geographiclib:x64-windows is already installed
+Package geotrans:x64-windows is already installed
+Package glad:x64-windows is already installed
+Package glew:x64-windows is already installed
+Package glfw3:x64-windows is already installed
+Package glm:x64-windows is already installed
+Package kinectsdk1:x64-windows is already installed
+Package kinectsdk2:x64-windows is already installed
+Package libdshowcapture:x64-windows is already installed
+Package liblo:x64-windows is already installed
+Package liblzma:x64-windows is already installed
+Package libmodbus:x64-windows is already installed
+Package libnoise:x64-windows is already installed
+Package libsodium:x64-windows is already installed
+Package libssh:x64-windows is already installed
+Package libssh2:x64-windows is already installed
+Package libusb:x64-windows is already installed
+Package libusb-win32:x64-windows is already installed
+Package libusbmuxd:x64-windows is already installed
+Package libzip:x64-windows is already installed
+Package llvm:x64-windows is already installed
+Package lz4:x64-windows is already installed
+Package mongo-c-driver:x64-windows is already installed
+Package mongo-cxx-driver:x64-windows is already installed
+Package msgpack:x64-windows is already installed
+Package nanomsg:x64-windows is already installed
+Package nng:x64-windows is already installed
+Package opencv:x64-windows is already installed
+Package openimageio:x64-windows is already installed
+Package paho-mqtt:x64-windows is already installed
+Package paho-mqttpp3:x64-windows is already installed
+Package proj:x64-windows is already installed
+Package protobuf:x64-windows is already installed
+Package quaternions:x64-windows is already installed
+Package rpclib:x64-windows is already installed
+Package sdl2:x64-windows is already installed
+Package sdl2-gfx:x64-windows is already installed
+Package sdl2-image:x64-windows is already installed
+Package sdl2-mixer:x64-windows is already installed
+Package sdl2-net:x64-windows is already installed
+Package sdl2-ttf:x64-windows is already installed
+Package sdl2pp:x64-windows is already installed
+Package slikenet:x64-windows is already installed
+Package speex:x64-windows is already installed
+Package speexdsp:x64-windows is already installed
+Package zeromq:x64-windows is already installed
+Package zlib:x64-windows is already installed
+Package zstd:x64-windows is already installed
+Package zziplib:x64-windows is already installed
+
+Total elapsed time: 360.4 us
+
+The package alembic:x64-windows provides CMake targets:
+
+    find_package(Alembic CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE Alembic::Alembic)
+
+The package assimp:x64-windows provides CMake targets:
+
+    find_package(Assimp CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE assimp::assimp)
+
+The package brotli:x64-windows provides CMake targets:
+
+    find_package(unofficial-brotli CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE unofficial::brotli::brotlidec unofficial::brotli::brotlienc unofficial::brotli::brotlicommon)
+
+The package bullet3 provides CMake targets:
+
+find_package(Bullet CONFIG REQUIRED)
+target_link_libraries(main PRIVATE LinearMath Bullet3Common BulletDynamics BulletSoftBody)
+
+The package bzip2 is compatible with built-in CMake targets:
+
+    find_package(BZip2 REQUIRED)
+    target_link_libraries(main PRIVATE BZip2::BZip2)
+
+The package cgal provides CMake targets:
+
+    find_package(CGAL CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE CGAL::CGAL)
+
+
+The package cppzmq:x64-windows provides CMake targets:
+
+    find_package(cppzmq CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE cppzmq cppzmq-static)
+
+The package curl:x64-windows provides CMake targets:
+
+    find_package(CURL CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE CURL::libcurl)
+
+The package czmq:x64-windows provides CMake targets:
+
+    find_package(czmq CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE czmq czmq-static)
+
+The package flatbuffers:x64-windows provides CMake targets:
+
+    find_package(Flatbuffers CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE flatbuffers::flatbuffers)
+
+The package freeglut is compatible with built-in CMake targets:
+
+    find_package(GLUT REQUIRED)
+    target_link_libraries(main PRIVATE GLUT::GLUT)
+
+The package GDAL provides CMake targets:
+
+    find_package(GDAL REQUIRED)
+    target_include_directories(main PRIVATE ${GDAL_INCLUDE_DIR})
+    target_link_libraries(main PRIVATE ${GDAL_LIBRARY})
+The package geographiclib:x64-windows provides CMake targets:
+
+    find_package (GeographicLib CONFIG REQUIRED)
+    target_link_libraries (main PRIVATE ${GeographicLib_LIBRARIES})
+
+The package geotrans provides CMake targets:
+
+    find_package(geotrans CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE geotrans::MSPdtcc geotrans::MSPCoordinateConversionService)
+
+
+The geotrans library depends on being able to read it's model data so you'll need to
+set an environment variable to let geotrans know where the models are installed:
+
+export MSPCCS_DATA=D:/GitHub/vcpkg/installed/x64-windows/share/geotrans/data
+
+
+The package glad:x64-windows provides CMake targets:
+
+    find_package(glad CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE glad::glad)
+
+The package glew is compatible with built-in CMake targets:
+
+    find_package(GLEW REQUIRED)
+    target_link_libraries(main PRIVATE GLEW::GLEW)
+
+The package glfw3:x64-windows provides CMake targets:
+
+    find_package(glfw3 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE glfw)
+
+The package glm:x64-windows provides CMake targets:
+
+    find_package(glm CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE glm)
+
+The package liblzma:x64-windows provides CMake targets:
+
+    find_package(LibLZMA CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE LibLZMA::LibLZMA)
+
+The package libmodbus:x64-windows provides CMake targets:
+
+    find_package(libmodbus CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE modbus)
+
+The package libsodium:x64-windows provides CMake targets:
+
+    find_package(unofficial-sodium CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE unofficial-sodium::sodium)
+
+The package libssh is compatible with built-in CMake targets:
+
+    find_package(libssh CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE ssh)
+
+The package libssh2:x64-windows provides CMake targets:
+
+    find_package(Libssh2 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE Libssh2::libssh2)
+
+The package libusb:x64-windows provides CMake targets:
+
+    find_package(libusb CONFIG REQUIRED)
+    target_include_directories(main PRIVATE ${LIBUSB_INCLUDE_DIRS})
+    target_link_libraries(main PRIVATE ${LIBUSB_LIBRARIES})
+
+The package libzip:x64-windows provides CMake targets:
+
+    find_package(libzip CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE libzip::zip)
+
+The package llvm:x64-windows provides CMake targets:
+
+    find_package(Clang CONFIG REQUIRED)
+    # Note: 27 target(s) were omitted.
+    target_link_libraries(main PRIVATE clangAST clangLex libclang clangEdit)
+
+    find_package(LLVM CONFIG REQUIRED)
+    # Note: 66 target(s) were omitted.
+    target_link_libraries(main PRIVATE LTO LLVMMC LLVMLTO LLVMMCA)
+
+The package lz4:x64-windows provides CMake targets:
+
+    find_package(lz4 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE lz4::lz4)
+
+The package mongo-c-driver is compatible with built-in CMake targets:
+	
+	find_package(libmongoc-1.0 CONFIG REQUIRED)
+	
+	target_include_directories(main PRIVATE ${MONGOC_INCLUDE_DIRS})
+	target_link_libraries(main PRIVATE ${MONGOC_LIBRARIES})
+	target_compile_definitions(main PRIVATE ${MONGOC_DEFINITIONS})
+
+The package msgpack:x64-windows provides CMake targets:
+
+    find_package(msgpack CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE msgpackc msgpackc-cxx)
+
+The package nanomsg:x64-windows provides CMake targets:
+
+    find_package(nanomsg CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE nanomsg)
+
+The package nng:x64-windows provides CMake targets:
+
+    find_package(nng CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE nng::nng)
+
+The package openimageio:x64-windows provides CMake targets:
+
+    find_package(Modules CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE OpenImageIO::OpenImageIO)
+
+    find_package(OpenImageIO CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE OpenImageIO::OpenImageIO OpenImageIO::OpenImageIO_Util)
+
+The package paho-mqtt:x64-windows provides CMake targets:
+
+    find_package(eclipse-paho-mqtt-c CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE eclipse-paho-mqtt-c::paho-mqtt3a eclipse-paho-mqtt-c::paho-mqtt3c eclipse-paho-mqtt-c::paho-mqtt3as eclipse-paho-mqtt-c::paho-mqtt3cs)
+
+The package paho-mqttpp3:x64-windows provides CMake targets:
+
+    find_package(PahoMqttCpp CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE PahoMqttCpp::paho-mqttpp3)
+
+The package protobuf:x64-windows provides CMake targets:
+
+    find_package(protobuf CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE protobuf::libprotoc protobuf::libprotobuf protobuf::libprotobuf-lite)
+
+The package quaternions:x64-windows is header only and can be used from CMake via:
+
+    find_path(QUATERNIONS_INCLUDE_DIRS "quaternion.h")
+    target_include_directories(main PRIVATE ${QUATERNIONS_INCLUDE_DIRS})
+
+The package rpclib:x64-windows provides CMake targets:
+
+    find_package(rpclib CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE rpclib::rpc)
+
+The package sdl2:x64-windows provides CMake targets:
+
+    find_package(SDL2 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE SDL2::SDL2 SDL2::SDL2main)
+
+The package sdl2-gfx:x64-windows provides CMake targets:
+
+    find_package(sdl2-gfx CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE SDL2::SDL2_gfx)
+
+The package sdl2-image:x64-windows provides CMake targets:
+
+    find_package(sdl2-image CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE SDL2::SDL2_image)
+
+The package sdl2-mixer:x64-windows provides CMake targets:
+
+    find_package(sdl2-mixer CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE SDL2::SDL2_mixer)
+
+The package sdl2-net:x64-windows provides CMake targets:
+
+    find_package(sdl2-net CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE SDL2::SDL2_net)
+
+The package sdl2-ttf:x64-windows provides CMake targets:
+
+    find_package(sdl2-ttf CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE SDL2::SDL2_ttf)
+
+The package slikenet provides CMake targets:
+
+    find_package(slikenet CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE SLikeNet)
+The package zeromq:x64-windows provides CMake targets:
+
+    find_package(ZeroMQ CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE libzmq libzmq-static)
+
+The package zlib is compatible with built-in CMake targets:
+
+    find_package(ZLIB REQUIRED)
+    target_link_libraries(main PRIVATE ZLIB::ZLIB)
+
+The package zstd:x64-windows provides CMake targets:
+
+    find_package(zstd CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE libzstd)
+
