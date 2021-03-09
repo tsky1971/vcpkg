@@ -13,6 +13,7 @@ czmq ^
 cppzmq ^
 curl ^
 enet ^
+entt ^
 evpp ^
 fastlz ^
 flatbuffers ^
