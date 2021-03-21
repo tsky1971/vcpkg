@@ -4,6 +4,7 @@ SET EXE_VCPKG="D:/GitHub/vcpkg/vcpkg.exe"
 SET TRIPLET=x64-windows
 
 SET PAKETS=alembic ^
+asio ^
 assimp ^
 brotli ^
 bzip2 ^
@@ -12,6 +13,7 @@ cgal ^
 czmq ^
 cppzmq ^
 curl ^
+devil ^
 enet ^
 entt ^
 evpp ^
@@ -26,6 +28,7 @@ glad ^
 glm ^
 glew ^
 glfw3 ^
+jasper ^
 kinectsdk1 ^
 kinectsdk2 ^
 llvm ^
@@ -42,6 +45,7 @@ libzip ^
 lz4 ^
 libnoise ^
 libdshowcapture ^
+mathgl ^
 mongo-c-driver ^
 mongo-cxx-driver ^
 msgpack ^
@@ -49,10 +53,14 @@ nanomsg ^
 nng ^
 opencv ^
 openimageio ^
+openjpeg ^
+openni ^
 paho-mqtt ^
 paho-mqttpp3[ssl] ^
 protobuf ^
 proj ^
+pthread ^
+pthreads ^
 quaternions ^
 rpclib ^
 speex ^

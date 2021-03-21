@@ -1,7 +1,7 @@
-Your feedback is important to improve Vcpkg! Please take 3 minutes to complete our survey by running: vcpkg contact --survey
 Computing installation plan...
 The following packages are already installed:
     alembic[core]:x64-windows
+    asio[core]:x64-windows
     assimp[core]:x64-windows
     brotli[core]:x64-windows
     bullet3[core]:x64-windows
@@ -10,7 +10,9 @@ The following packages are already installed:
     cppzmq[core]:x64-windows
     curl[core,non-http,schannel,ssl,sspi,winssl]:x64-windows
     czmq[core]:x64-windows
+    devil[core,jasper,lcms,libjpeg,libpng,openexr,tiff]:x64-windows
     enet[core]:x64-windows
+    entt[core]:x64-windows
     evpp[core]:x64-windows
     fastlz[core]:x64-windows
     ffmpeg[avcodec,avdevice,avfilter,avformat,avresample,core,gpl,postproc,swresample,swscale]:x64-windows
@@ -23,6 +25,7 @@ The following packages are already installed:
     glew[core]:x64-windows
     glfw3[core]:x64-windows
     glm[core]:x64-windows
+    jasper[core]:x64-windows
     kinectsdk1[core]:x64-windows
     kinectsdk2[core]:x64-windows
     libdshowcapture[core]:x64-windows
@@ -39,6 +42,7 @@ The following packages are already installed:
     libzip[bzip2,core,default-aes,openssl,wincrypto]:x64-windows
     llvm[clang,core,default-targets,disable-abi-breaking-checks,disable-assertions,disable-clang-static-analyzer,enable-rtti,lld,target-x86,tools]:x64-windows
     lz4[core]:x64-windows
+    mathgl[core,jpeg,opengl,png,zlib]:x64-windows
     mongo-c-driver[core]:x64-windows
     mongo-cxx-driver[core]:x64-windows
     msgpack[core]:x64-windows
@@ -46,10 +50,13 @@ The following packages are already installed:
     nng[core]:x64-windows
     opencv[core,dnn,jpeg,opengl,png,tiff,webp]:x64-windows
     openimageio[core]:x64-windows
+    openjpeg[core]:x64-windows
     paho-mqtt[core]:x64-windows
     paho-mqttpp3[core,ssl]:x64-windows
     proj[core]:x64-windows
     protobuf[core]:x64-windows
+    pthread[core]:x64-windows
+    pthreads[core]:x64-windows
     quaternions[core]:x64-windows
     rpclib[core]:x64-windows
     sdl2[core]:x64-windows
@@ -67,6 +74,7 @@ The following packages are already installed:
     zstd[core]:x64-windows
     zziplib[core]:x64-windows
 Package alembic:x64-windows is already installed
+Package asio:x64-windows is already installed
 Package assimp:x64-windows is already installed
 Package brotli:x64-windows is already installed
 Package bullet3:x64-windows is already installed
@@ -75,7 +83,9 @@ Package cgal:x64-windows is already installed
 Package cppzmq:x64-windows is already installed
 Package curl:x64-windows is already installed
 Package czmq:x64-windows is already installed
+Package devil:x64-windows is already installed
 Package enet:x64-windows is already installed
+Package entt:x64-windows is already installed
 Package evpp:x64-windows is already installed
 Package fastlz:x64-windows is already installed
 Package ffmpeg:x64-windows is already installed
@@ -88,6 +98,7 @@ Package glad:x64-windows is already installed
 Package glew:x64-windows is already installed
 Package glfw3:x64-windows is already installed
 Package glm:x64-windows is already installed
+Package jasper:x64-windows is already installed
 Package kinectsdk1:x64-windows is already installed
 Package kinectsdk2:x64-windows is already installed
 Package libdshowcapture:x64-windows is already installed
@@ -104,6 +115,7 @@ Package libusbmuxd:x64-windows is already installed
 Package libzip:x64-windows is already installed
 Package llvm:x64-windows is already installed
 Package lz4:x64-windows is already installed
+Package mathgl:x64-windows is already installed
 Package mongo-c-driver:x64-windows is already installed
 Package mongo-cxx-driver:x64-windows is already installed
 Package msgpack:x64-windows is already installed
@@ -111,10 +123,13 @@ Package nanomsg:x64-windows is already installed
 Package nng:x64-windows is already installed
 Package opencv:x64-windows is already installed
 Package openimageio:x64-windows is already installed
+Package openjpeg:x64-windows is already installed
 Package paho-mqtt:x64-windows is already installed
 Package paho-mqttpp3:x64-windows is already installed
 Package proj:x64-windows is already installed
 Package protobuf:x64-windows is already installed
+Package pthread:x64-windows is already installed
+Package pthreads:x64-windows is already installed
 Package quaternions:x64-windows is already installed
 Package rpclib:x64-windows is already installed
 Package sdl2:x64-windows is already installed
@@ -132,12 +147,17 @@ Package zlib:x64-windows is already installed
 Package zstd:x64-windows is already installed
 Package zziplib:x64-windows is already installed
 
-Total elapsed time: 360.4 us
+Total elapsed time: 395 us
 
 The package alembic:x64-windows provides CMake targets:
 
     find_package(Alembic CONFIG REQUIRED)
     target_link_libraries(main PRIVATE Alembic::Alembic)
+
+The package asio:x64-windows provides CMake targets:
+
+    find_package(asio CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE asio asio::asio)
 
 The package assimp:x64-windows provides CMake targets:
 
@@ -179,6 +199,11 @@ The package czmq:x64-windows provides CMake targets:
 
     find_package(czmq CONFIG REQUIRED)
     target_link_libraries(main PRIVATE czmq czmq-static)
+
+The package entt:x64-windows provides CMake targets:
+
+    find_package(EnTT CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE EnTT::EnTT)
 
 The package flatbuffers:x64-windows provides CMake targets:
 
@@ -283,6 +308,11 @@ The package lz4:x64-windows provides CMake targets:
     find_package(lz4 CONFIG REQUIRED)
     target_link_libraries(main PRIVATE lz4::lz4)
 
+The package mathgl:x64-windows provides CMake targets:
+
+    find_package(mathgl CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE mgl mgl-static)
+
 The package mongo-c-driver is compatible with built-in CMake targets:
 	
 	find_package(libmongoc-1.0 CONFIG REQUIRED)
@@ -313,6 +343,11 @@ The package openimageio:x64-windows provides CMake targets:
 
     find_package(OpenImageIO CONFIG REQUIRED)
     target_link_libraries(main PRIVATE OpenImageIO::OpenImageIO OpenImageIO::OpenImageIO_Util)
+
+The package openjpeg:x64-windows provides CMake targets:
+
+    find_package(OpenJPEG CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE openjp2)
 
 The package paho-mqtt:x64-windows provides CMake targets:
 

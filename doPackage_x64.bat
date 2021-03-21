@@ -1,7 +1,10 @@
+echo on
+
 SET EXE_VCPKG="D:/GitHub/vcpkg/vcpkg.exe"
 SET TRIPLET=x64-windows
 
 SET PAKETS=alembic ^
+asio ^
 assimp ^
 brotli ^
 bzip2 ^
@@ -11,6 +14,7 @@ czmq ^
 cppzmq ^
 curl ^
 enet ^
+evpp ^
 fastlz ^
 flatbuffers ^
 freeglut ^
@@ -39,6 +43,7 @@ mongo-cxx-driver ^
 msgpack ^
 libmodbus ^
 nanomsg ^
+nng ^
 opencv ^
 openimageio ^
 protobuf ^
@@ -51,14 +56,17 @@ sdl2-mixer ^
 sdl2-net ^
 sdl2-ttf ^
 sdl2pp ^
+slikenet ^
 zeromq ^
 zlib ^
 zstd ^
 zziplib
 
-%EXE_VCPKG% --triplet %TRIPLET% install %PAKETS% 
-%EXE_VCPKG% --triplet %TRIPLET% export %PAKETS% --zip 
+%EXE_VCPKG% --triplet %TRIPLET% install %PAKETS% --recurse > vcpgk_cmake_find.txt
+%EXE_VCPKG% --triplet %TRIPLET% upgrade %PAKETS% --no-dry-run
+rem %EXE_VCPKG% --triplet %TRIPLET% export %PAKETS% --zip 
 
+echo off
 pause
 
 rem ode ^
