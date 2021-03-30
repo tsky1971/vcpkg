@@ -48,6 +48,7 @@ libdshowcapture ^
 mathgl ^
 mongo-c-driver ^
 mongo-cxx-driver ^
+mosquitto ^
 msgpack ^
 nanomsg ^
 nng ^
@@ -78,11 +79,11 @@ zlib ^
 zstd ^
 zziplib
 
-%EXE_VCPKG% --triplet %TRIPLET% install %PAKETS% --recurse > vcpgk_cmake_find.txt
-%EXE_VCPKG% --triplet %TRIPLET% upgrade %PAKETS% --no-dry-run
-%EXE_VCPKG% --triplet %TRIPLET% export %PAKETS% --zip 
-
-echo off
+%EXE_VCPKG% --triplet %TRIPLET% install %PAKETS% --recurse > vcpkg_cmake_find.txt
+pause 
+rem %EXE_VCPKG% --triplet %TRIPLET% upgrade %PAKETS% --no-dry-run
+pause 
+rem %EXE_VCPKG% --triplet %TRIPLET% export %PAKETS% --zip 
 pause
 
 rem ode ^
