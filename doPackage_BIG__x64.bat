@@ -1,5 +1,11 @@
 echo on
 
+echo "SET VC Enterprise"
+pushd "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/"
+call vcvars64.bat
+popd
+
+echo "SET VCPKG"
 SET EXE_VCPKG="D:/GitHub/vcpkg/vcpkg.exe"
 SET TRIPLET=x64-windows
 
@@ -77,8 +83,8 @@ zlib ^
 zstd ^
 zziplib
 
-%EXE_VCPKG% --triplet %TRIPLET% install %PAKETS% --recurse > vcpgk_cmake_find.txt
-%EXE_VCPKG% --triplet %TRIPLET% upgrade %PAKETS% --no-dry-run
+%EXE_VCPKG% --triplet %TRIPLET% install %PAKETS% --recurse 
+rem %EXE_VCPKG% --triplet %TRIPLET% upgrade %PAKETS% --no-dry-run
 %EXE_VCPKG% --triplet %TRIPLET% export %PAKETS% --zip 
 
 echo off
