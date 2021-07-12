@@ -54,7 +54,6 @@ nng ^
 opencv ^
 openimageio ^
 openjpeg ^
-openni ^
 paho-mqtt ^
 paho-mqttpp3[ssl] ^
 protobuf ^
