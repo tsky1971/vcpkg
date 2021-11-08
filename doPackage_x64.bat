@@ -6,14 +6,12 @@ assimp ^
 brotli ^
 bzip2 ^
 bullet3 ^
-cgal ^
 czmq ^
 cppzmq ^
 curl ^
 enet ^
 fastlz ^
 flatbuffers ^
-gdal ^
 freeglut ^
 glm ^
 glew ^
@@ -58,3 +56,5 @@ rem ode ^
 rem mongo-c-driver ^
 rem mongo-cxx-driver ^
 rem ffmpeg ^
+rem gdal ^
+rem cgal ^
