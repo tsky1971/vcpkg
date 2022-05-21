@@ -3,8 +3,8 @@ vcpkg_check_linkage(ONLY_DYNAMIC_LIBRARY)
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO ValveSoftware/GameNetworkingSockets
-    REF 681ce028953088fc585c239bdf39c4cd9f516737 #2021-04-26
-    SHA512 9d5453aa1e82a672a05c2c54c94c446e2b4a2bb46474d3a0c191a57c146aa58c35974ebecf46b59a68f7c74e10b2c3baf240c3d4e99728cb9d349fcf051b3512
+    REF b99aa75ed9b1ec57d5c90ee009f8de8882eeca13 # v1.4.0
+    SHA512 1776a6a66d2c6546a8a3d71123544ea9590ab6b123d4a92eebd38c0a195f09a55185b999250c518527e1d8983176732429901a2f781a883715e6695b597229f5
     HEAD_REF master
 )
 
@@ -14,8 +14,9 @@ vcpkg_configure_cmake(
     SOURCE_PATH ${SOURCE_PATH}
     PREFER_NINJA
     OPTIONS
-        -DGAMENETWORKINGSOCKETS_BUILD_TESTS=OFF
-        -DGAMENETWORKINGSOCKETS_BUILD_EXAMPLES=OFF
+        -DBUILD_TESTS=OFF
+        -DBUILD_EXAMPLES=OFF
+        -DBUILD_TOOLS=OFF
         -DUSE_CRYPTO=${CRYPTO_BACKEND}
         -DUSE_CRYPTO25519=${CRYPTO_BACKEND}
 )
@@ -24,6 +25,7 @@ vcpkg_install_cmake()
 file(INSTALL ${SOURCE_PATH}/LICENSE DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)
 
 vcpkg_fixup_cmake_targets(CONFIG_PATH "lib/cmake/GameNetworkingSockets" TARGET_PATH "share/GameNetworkingSockets")
+vcpkg_fixup_pkgconfig()
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")

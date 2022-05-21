@@ -1,8 +1,20 @@
 {
   "name": "tgui",
   "version-date": "2021-04-19",
+  "port-version": 3,
   "description": "TGUI is an easy to use, cross-platform, C++ GUI for SFML.",
   "homepage": "https://tgui.eu",
+  "license": "Zlib",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
   "default-features": [
     "sdl2",
     "sfml"
@@ -34,7 +46,16 @@
       ]
     },
     "tool": {
-      "description": "Build GUI builder"
+      "description": "Build GUI builder",
+      "dependencies": [
+        {
+          "name": "tgui",
+          "features": [
+            "sdl2",
+            "sfml"
+          ]
+        }
+      ]
     }
   }
 }

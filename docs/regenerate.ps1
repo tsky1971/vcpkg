@@ -27,7 +27,9 @@ class CMakeDocumentation {
 
 [String[]]$cmakeScriptsPorts = @(
     'vcpkg-cmake'
+    'vcpkg-gn'
     'vcpkg-cmake-config'
+    'vcpkg-cmake-get-vars'
     'vcpkg-pkgconfig-get-modules'
 )
 
@@ -212,7 +214,7 @@ function ParseCmakeDocComment
         $Docs.HasError = $True
     }
 
-    if ($contents.Length -ne 0)
+    if (-not [String]::IsNullOrEmpty($contents))
     {
         $Docs.ActualDocumentation = $contents
     }
@@ -222,7 +224,7 @@ function ParseCmakeDocComment
 
 Get-ChildItem "$VcpkgRoot/scripts/cmake" -Filter '*.cmake' | ForEach-Object {
     $docs = ParseCmakeDocComment $_
-    [Bool]$isInternalFunction = $_.Name.StartsWith("vcpkg_internal") -or $_.Name.StartsWith("z_vcpkg")
+    [Bool]$isInternalFunction = $_.Name.StartsWith("z_vcpkg")
 
     if ($docs.IsDeprecated -and $null -eq $docs.ActualDocumentation)
     {
@@ -264,7 +266,9 @@ Get-ChildItem "$VcpkgRoot/scripts/cmake" -Filter '*.cmake' | ForEach-Object {
 $cmakeScriptsPorts | ForEach-Object {
     $portName = $_
 
-    Copy-Item "$VcpkgRoot/ports/$portName/README.md" "$PSScriptRoot/maintainers/ports/$portName.md"
+    if (Test-Path "$VcpkgRoot/ports/$portName/README.md") {
+        Copy-Item "$VcpkgRoot/ports/$portName/README.md" "$PSScriptRoot/maintainers/ports/$portName.md"
+    }
     New-Item -Path "$PSScriptRoot/maintainers/ports/$portName" -Force -ItemType 'Directory' | Out-Null
 
     $portTableOfContents[$portName] = @()
@@ -311,6 +315,7 @@ function GetDeprecationMessage
     Param(
         [CMakeDocumentation]$Doc
     )
+    $message = ''
     if ($Doc.IsDeprecated)
     {
         $message = " (deprecated"
