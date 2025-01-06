@@ -2,7 +2,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO facebook/proxygen
     REF "v${VERSION}"
-    SHA512 b4160ece2d4c674cf4ca6a2ec97d0cfdbd3acf79fbdf7ef0e9fb05cf7605a26a19fe0d9235d83492223cfb36d5c6d05474b9e3fb06978041db5bd0eadaa01ca3
+    SHA512 c8bc346dac463e49bb78db8274aa95a8d991670b95e6aa418498247f7b47b1ea580f4a11914a3bae83f62b45c7b0c241f0ba6ee198d03be2f5de28772e138236
     HEAD_REF main
     PATCHES
         remove-register.patch
