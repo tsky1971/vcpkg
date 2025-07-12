@@ -1,5 +1,5 @@
 rem SET EXE_VCPKG="D:/GitHub/tsky1971/vcpkg/vcpkg.exe"
-SET EXE_VCPKG="D:/GitHub/vcpkg/vcpkg.exe"
+SET EXE_VCPKG="d:/GitHub/vcpkg/vcpkg.exe"
 SET TRIPLET=x64-windows
 
 %EXE_VCPKG% --triplet %TRIPLET% install alembic 
